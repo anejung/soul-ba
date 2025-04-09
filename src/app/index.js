@@ -1,3 +1,5 @@
+"use client"; // Add this line to mark the file as a client component
+
 import { useState } from "react";
 
 export default function Home() {
