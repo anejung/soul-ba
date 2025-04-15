@@ -1,0 +1,13 @@
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1024px) { /* Desktop */
+    .responsive-img {
+        width: auto; /* Use natural width */
+        max-height: 100vh; /* Fit top and bottom edges of the browser */
+        display: block;
+        margin: auto; /* Center the image */
+    }
+}
