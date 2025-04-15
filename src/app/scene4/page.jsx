@@ -15,7 +15,7 @@ export default function Page() {
                 backgroundColor: "black",
                 cursor: "pointer", 
             }}
-            onClick={() => router.push('/scene6')} 
+            onClick={() => router.push('/scene5')} 
         >
             <img
                 src="/9.png"

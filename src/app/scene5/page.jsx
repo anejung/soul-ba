@@ -1,9 +1,19 @@
-"use client"
+"use client";
 
-import { useRouter } from 'next/navigation'; // Import the useRouter hook
+import { useRouter } from 'next/navigation'; // Import useRouter
+import { useState, useEffect } from 'react'; // Import useState and useEffect
 
 export default function Page() {
-    const router = useRouter(); // Initialize the router
+    const router = useRouter(); // Initialize router
+    const [showButtons, setShowButtons] = useState(false); // State to control button visibility
+
+    // Show buttons after 2 seconds
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowButtons(true);
+        }, 2000); // 2 seconds delay
+        return () => clearTimeout(timer); // Cleanup timer on unmount
+    }, []);
 
     return (
         <div
@@ -13,10 +23,11 @@ export default function Page() {
                 justifyContent: "center",
                 alignItems: "center",
                 backgroundColor: "black",
-                cursor: "pointer", 
+                position: "relative",
+                flexDirection: "column", // Stack items vertically
             }}
-            onClick={() => router.push('/scene6')} 
         >
+            {/* Display GIF */}
             <img
                 src="/10.gif"
                 style={{
@@ -26,6 +37,70 @@ export default function Page() {
                     maxWidth: "100%",
                 }}
             />
+
+            {/* Buttons displayed after 2 seconds */}
+            {showButtons && (
+                <div
+                    style={{
+                        position: "absolute",
+                        display: "flex",
+                        flexDirection: "column", // Stack buttons vertically
+                        gap: "10px", // Space between buttons
+                        backgroundColor: "black",
+                        padding: "10px",
+                        borderRadius: "5px",
+                    }}
+                >
+                    {/* First Button */}
+                    <button
+                        style={{
+                            backgroundColor: "#333",
+                            color: "white",
+                            border: "none",
+                            padding: "10px",
+                            cursor: "not-allowed", // Makes button unclickable
+                            opacity: 0.7,
+                        }}
+                        disabled
+                    >
+                        เมื่อคุณเจอทางแยก
+                        ทางหนึ่งเป็นทางชันแต่ตรง อีกทางหนึ่งคดเคี้ยวแต่ราบเรียบ
+                        คุณจะเลือกทางไหน?
+                    </button>
+
+                    {/* Second Button (Clickable) */}
+                    <button
+                        onClick={() => router.push('/scene6')} // Navigate to scene6
+                        style={{
+                            backgroundColor: "#007BFF",
+                            color: "white",
+                            border: "none",
+                            padding: "10px",
+                            cursor: "pointer",
+                            borderRadius: "5px",
+                        }}
+                    >
+                        ทางชัน—เพราะอยากเผชิญหน้า
+                        กับอุปสรรคตรงๆ
+                    </button>
+
+                    {/* Third Button */}
+                    <button
+                        style={{
+                            backgroundColor: "#333",
+                            color: "white",
+                            border: "none",
+                            padding: "10px",
+                            cursor: "not-allowed", // Makes button unclickable
+                            opacity: 0.7,
+                        }}
+                        disabled
+                    >
+                        ทางราบ—เพราะอยากใช้เวลา
+                        ไตร่ตรองระหว่างทาง
+                    </button>
+                </div>
+            )}
         </div>
     );
 }
