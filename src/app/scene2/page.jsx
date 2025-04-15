@@ -1,14 +1,29 @@
+"use client"
+
+import { useRouter } from 'next/navigation'; // Import the useRouter hook
+
 export default function Page() {
+    const router = useRouter(); // Initialize the router
+
     return (
-        <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" ,backgroundColor: "white"}}>
+        <div
+            style={{
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "black",
+                cursor: "pointer", 
+            }}
+            onClick={() => router.push('/scene3')} 
+        >
             <img
                 src="/2.GIF"
                 style={{
-                    maxHeight: "100vh", // Ensures the image height fits the viewport
+                    maxHeight: "100vh",
                     height: "auto",
-                    width: "auto",      // Keeps the aspect ratio intact
-                    maxWidth: "100%",   // Prevents the image from overflowing horizontally
-
+                    width: "auto",
+                    maxWidth: "100%",
                 }}
             />
         </div>
