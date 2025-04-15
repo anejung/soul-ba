@@ -1,6 +1,5 @@
 "use client"
-
-import { useRouter } from 'next/navigation'; // Import the useRouter hook
+import { useRouter } from 'next/navigation'; // Import useRouter from next/navigation
 
 export default function Page() {
     const router = useRouter(); // Initialize the router
@@ -13,12 +12,12 @@ export default function Page() {
                 justifyContent: "center",
                 alignItems: "center",
                 backgroundColor: "black",
-                cursor: "pointer", 
+                cursor: "pointer", // Makes the page clickable
             }}
-            onClick={() => router.push('/scene4')} 
+            onClick={() => router.push('/scene4')} // Navigate to /scene2 when clicked
         >
             <img
-                src="/3.GIF"
+                src="/8.png"
                 style={{
                     maxHeight: "100vh",
                     height: "auto",
