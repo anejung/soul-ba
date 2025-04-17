@@ -69,7 +69,7 @@ export default function Page() {
 
                     {/* Second Button (Clickable) */}
                     <button
-                        onClick={() => router.push('/scene8')}
+                        onClick={() => router.push('/scene10')}
                         style={{
                             backgroundColor: "black",
                             color: "white",
