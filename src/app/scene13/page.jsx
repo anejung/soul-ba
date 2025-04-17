@@ -58,12 +58,14 @@ export default function Page() {
             {/* Disabled Button */}
             <button
                 style={{
-                    backgroundColor: "#d3d3d3", // Light gray background for disabled button
+                    backgroundColor: "black", // Light gray background for disabled button
                     color: "white",
                     border: "none",
                     padding: "10px 20px",
-                    borderRadius: "5px",
+                    borderRadius: "20px",
                     cursor: "not-allowed", // Disabled cursor
+                    fontFamily: "'Anuphan', sans-serif", // Explicitly set fontFamily for button
+                    
                 }}
                 disabled // Disables the button
             >
