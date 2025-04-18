@@ -17,7 +17,7 @@ export default function Page() {
             onClick={() => router.push('/scene7')} // Navigate to /scene2 when clicked
         >
             <img
-                src="/11.GIF"
+                src="/11_1.GIF"
                 style={{
                     maxHeight: "100vh",
                     height: "auto",
