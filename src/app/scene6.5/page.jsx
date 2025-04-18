@@ -14,10 +14,10 @@ export default function Page() {
                 backgroundColor: "black",
                 cursor: "pointer", // Makes the page clickable
             }}
-            onClick={() => router.push('/scene2')} // Navigate to /scene2 when clicked
+            onClick={() => router.push('/scene7')} // Navigate to /scene2 when clicked
         >
             <img
-                src="/1.GIF"
+                src="/11.GIF"
                 style={{
                     maxHeight: "100vh",
                     height: "auto",

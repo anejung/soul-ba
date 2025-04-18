@@ -14,7 +14,7 @@ export default function Page() {
                 backgroundColor: "black",
                 cursor: "pointer", // Makes the page clickable
             }}
-            onClick={() => router.push('/scene7')} // Navigate to /scene2 when clicked
+            onClick={() => router.push('/scene6.5')} // Navigate to /scene2 when clicked
         >
             <img
                 src="/10_1.GIF"
