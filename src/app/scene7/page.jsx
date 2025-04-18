@@ -29,7 +29,7 @@ export default function Page() {
         >
             {/* Display GIF */}
             <img
-                src="/12.gif"
+                src="/12_0.GIF"
                 style={{
                     maxHeight: "100vh",
                     height: "auto",
