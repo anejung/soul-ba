@@ -1,4 +1,6 @@
-"use client"
+
+"use client";
+
 import { useRouter } from 'next/navigation'; // Import useRouter from next/navigation
 
 export default function Page() {
@@ -11,20 +13,26 @@ export default function Page() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                backgroundColor: "black",
+                backgroundColor: "white",
+                color: "black", // Text color
+                fontFamily: "'Anuphan', sans-serif", // Font styling
                 cursor: "pointer", // Makes the page clickable
+                textAlign: "center", // Centers the text horizontally
+                padding: "20px", // Adds padding to the text
             }}
-            onClick={() => router.push('/scene13')} // Navigate to /scene2 when clicked
+            onClick={() => router.push('/scene13')} // Navigate to /scene3 when clicked
         >
-            <img
-                src="/16.png"
-                style={{
-                    maxHeight: "100vh",
-                    height: "auto",
-                    width: "auto",
-                    maxWidth: "100%",
-                }}
-            />
+            {/* Text Content */}
+            <p style={{ fontSize: "1rem", lineHeight: "2rem" }}>
+                
+                ทุกการตัดสินใจของคุณได้สร้าง<br />
+                ชามโซบะที่สะท้อนถึงตัวตนของคุณเอง <br />
+                <br />
+                นี่คือโซบะที่เหมาะสมที่สุด <br />
+                มันจะช่วยล้างความเหนื่อยล้า <br />
+                และเติมพลังให้คุณ<br />
+                พร้อมก้าวต่อไปในวันพรุ่งนี้<br />
+            </p>
         </div>
     );
 }
