@@ -31,8 +31,8 @@ export default function Page() {
                 flexDirection: "column",
                 fontFamily: 'Anuphan, sans-serif',
                 color: "white",
-                textAlign: "center", // Center text alignment
-                padding: "20px", // Add padding for aesthetics
+                textAlign: "center", //ให้text อยู่ตรงกลาง
+                padding: "20px", 
             }}
         >
             {/* Main content */}
@@ -56,15 +56,15 @@ export default function Page() {
                     fontSize: "16px",
                     fontWeight: "bold",
                     textTransform: "uppercase",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Add shadow for effect
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // มีเงา แต่ไม่เหนเพราะสีดำ
                     transition: "transform 0.2s, box-shadow 0.2s", // Animation effect
                 }}
-                onMouseOver={(e) => {
+                onMouseOver={(e) => { //พอเม้าเข้าใหญ่ขึ้น,shadow ใหญ่ขึ้น
                     e.currentTarget.style.transform = "scale(1.05)";
                     e.currentTarget.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.3)";
                 }}
                 onMouseOut={(e) => {
-                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.transform = "scale(1)"; //พอเม้าออกกลับไปเป็นเหมือนเดิม
                     e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
                 }}
             >

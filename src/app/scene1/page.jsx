@@ -1,16 +1,16 @@
 "use client";
 
-import { useRouter } from 'next/navigation'; // Import useRouter from next/navigation
-import { useState, useEffect } from 'react'; // Import useState and useEffect for state and lifecycle handling
+import { useRouter } from 'next/navigation'; // ใช้เปลี่ยนหน้า ภายในnext.js
+import { useState, useEffect } from 'react'; // ใช้จัดการstate ของปุ่มที่ซ่อนอยู่ , ใช้ควบคุมช่วงเวลา ที่ปุ่มจะปรากฏขึ้นหลัง GIF เล่นจบ
 
 export default function Page() {
     const router = useRouter(); // Initialize the router
-    const [visible, setVisible] = useState(false); // State to control button visibility
+    const [visible, setVisible] = useState(false); // เซท visibility ของปุ่ม
     const [clickable, setClickable] = useState(false); // State to control whether clicking is allowed
 
-    // UseEffect to control visibility and clickability after the GIF's duration
+    // UseEffect จัดการ visibility , clickability หลังจาก เวลา GIF จบ
     useEffect(() => {
-        const gifDuration = 30000; // Set the GIF duration in milliseconds (e.g., 32000ms = 32 seconds)
+        const gifDuration = 30000; 
         const timer = setTimeout(() => {
             setVisible(true); // Make the button visible after GIF ends
             setClickable(true); // Enable clicking after GIF ends
@@ -21,8 +21,8 @@ export default function Page() {
 
     return (
         <div
-            style={{
-                height: "100vh", // Full viewport height
+            style={{ //เซทให้ทุกอย่างอยู่ตรงกลาง
+                height: "100vh", 
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -30,27 +30,27 @@ export default function Page() {
                 position: "relative", // Allows the button to stay inside the GIF frame
             }}
         >
-            {/* Wrapper for the GIF and the button */}
+            {/* สร้างกรอบสำหรับ GIF และปุ่ม */}
             <div
-                style={{
+                style={{ 
                     position: "relative",
                     height: "100%", // Makes the container occupy full height
                     width: "auto", // Maintains aspect ratio of GIF
                 }}
             >
-                {/* Display the GIF */}
+                {/* แสดง GIF ในกรอบ */}
                 <img
                     src="/1.GIF"
                     style={{
-                        maxHeight: "100%", // Occupy full container height
-                        height: "auto", // Keep proportions
+                        maxHeight: "100%", // ทำให้ GIF ขยายเต็มความสูงของกรอบ
+                        height: "auto", // รักษาสัดส่วนเดิมของ GIF
                         width: "auto",
                         maxWidth: "100%", // Prevent overflow
                         display: "block", // Prevent inline space below the GIF
                     }}
                 />
 
-                {/* Button to navigate (only clickable after GIF finishes) */}
+                {/* วางปุ่ม "Next" ให้อยู่ตรงมุม GIF (only clickable after GIF finishes) */}
                 <img
                     src="/next.png"
                     alt="Next"
