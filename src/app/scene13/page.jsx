@@ -12,6 +12,7 @@ export default function Page() {
                 padding: "20px",
                 backgroundColor: "#f5f5f5", // Light background color
                 fontFamily: "'Anuphan', sans-serif", // Font styling
+                minHeight: "100vh", // Ensures it fills the entire viewport height
             }}
         >
             {/* Header */}
@@ -21,14 +22,15 @@ export default function Page() {
 
             {/* Image */}
             <img
-                src="/food.png" // Path to your food image
-                alt="Food"
-                style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    marginBottom: "20px",
-                }}
+            src="/food.png" // Path to your food image
+            alt="Food"
+            style={{
+                width: "300px", // Fixed width
+                height: "auto", // Maintains the original ratio
+                marginBottom: "20px",
+            }}
             />
+
 
             {/* Subtitle */}
             <h2 style={{ fontSize: "2rem", color: "#333", marginBottom: "20px" }}>
